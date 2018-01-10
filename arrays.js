@@ -5,55 +5,44 @@ var chocolateBars = [
   'skittles'
   ]
   
-function addElementToBeginningOfArray(){
-  var myArray = [1]
-  myArray2=['foo', ...myArray]
-  return myArray2
+function addElementToBeginningOfArray(array,element){
+  array=[element, ...array]
+  return array
 }
 
-function destructivelyAddElementToBeginningOfArray() {
-  var myArrayAlt = [1]
-  myArrayAlt.unshift('foo')
-  return myArrayAlt
+function destructivelyAddElementToBeginningOfArray(array,element) {
+  array.unshift(element)
+  return array
 }
 
-function addElementToEndOfArray(){
-  var myEndArray = [1]
-  myEndArray2=[...myEndArray,'foo']
-  return myEndArray2
+function addElementToEndOfArray(array,element){
+  array=[...array,element]
+  return array
 }
 
-function destructivelyAddElementToEndOfArray () {
-  var myEndArrayX = [1]
-  myEndArrayX.push('foo')
-  return myEndArrayX
+function destructivelyAddElementToEndOfArray (array,element) {
+  array.push(element)
+  return array
 }
 
-function accessElementInArray(){
-  var arrayWithIndex = ['Taipei','Kaohsiung',3]
-  return arrayWithIndex[2]
+function accessElementInArray(array,element){
+  return array[element]
 }
 
-function destructivelyRemoveElementFromBeginningOfArray(){
-  var arrayRm = [1,2,3]  
-  arrayRm.shift()
-  return arrayRm
+function destructivelyRemoveElementFromBeginningOfArray(array,element){
+  array.shift(element)
+  return array
 }
 
-function removeElementFromBeginningOfArray(){
-    var arrayRmX = ['Taipei',2,3]
-    var arrayRmX1 = arrayRmX.slice(1)
-    return arrayRmX1
+function removeElementFromBeginningOfArray(array){
+  return array.slice(1)
 }
 
-function destructivelyRemoveElementFromEndOfArray(){
-  var arrayFun = [1,2,3]
-  arrayFun.pop()
-  return arrayFun
+function destructivelyRemoveElementFromEndOfArray(array,element){
+  array.pop(element)
+  return array
 }
 
-function removeElementFromEndOfArray(){
-  var arrayFun = [1,2,'Waterslides']
-  var arrayFun1= arrayFun.slice(0,arrayFun.length - 1)
-  return arrayFun1
+function removeElementFromEndOfArray(array){
+ return array.slice(0,array.length - 1)
 }
